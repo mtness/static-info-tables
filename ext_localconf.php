@@ -25,10 +25,6 @@ call_user_func(
         // Names of static entities
         $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS'][$extKey]['entities'] =
             ['Country', 'CountryZone', 'Currency', 'Language', 'Territory'];
-        // Register cached domain model classes autoloader
-        require_once(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($extKey)
-            . 'Classes/Cache/CachedClassLoader.php');
-        \SJBR\StaticInfoTables\Cache\CachedClassLoader::registerAutoloader();
         // Possible label fields for different languages. Default as last.
         $labelTable = [
             'static_territories' => [
